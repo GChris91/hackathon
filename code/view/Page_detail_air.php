@@ -1,6 +1,50 @@
 <?php ob_start(); ?>
-    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-    <h1>Simple Sidebar</h1>
-    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+	<div class="Message">
+		<h1>Qualité de l'air</h1>
+		<section class="rgba-green">
+			<h3 class="green">Vert</h3>
+			<span>
+				L'air est propre.
+				Concentration de ... inférieur à ....
+				Concentration de ... inférieur à ....
+				Concentration de ... inférieur à ....
+			</span>
+		</section>
+		<section class="rgba-green">
+			<h3 class="green">Jaune</h3>
+			<span>
+				L'air est propre.
+				Concentration de ... supérieur à ....
+				Concentration de ... inférieur à ....
+				Concentration de ... inférieur à ....
+			</span>
+		</section>
+		<section class="rgba-green">
+			<h3 class="green">Orange</h3>
+			<span>
+				L'air est propre.
+				Concentration de ... supérieur à ....
+				Concentration de ... supérieur à ....
+				Concentration de ... inférieur à ....
+			</span>
+		</section>
+		<section class="rgba-green">
+			<h3 class="green">Rouge</h3>
+			<span>
+				L'air est propre.
+				Concentration de ... supérieur à ....
+				Concentration de ... supérieur à ....
+				Concentration de ... supérieur à ....
+			</span>
+		</section>
+	</div>
+
+	<p>
+		Les principaux pollueurs de l'air sont ...
+	</p>
+
+	<p>
+		Une pollution élevée de l'air peut causer ...
+		Il est recommandé de ne pas ...
+	</p>
 <?php $contents = ob_get_clean(); ?>
