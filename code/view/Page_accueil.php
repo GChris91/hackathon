@@ -23,7 +23,7 @@
     <!-- /#page-content-wrapper -->
 
     <div class="more">
-    	<a href="/Hackathon/index.php/detail_air">
+    	<a href="/Hackathon/code/index.php/detail_air">
 	        <section>
 	            <div class="info">
 	                <h1><i class="fa fa-cloud green" aria-hidden="true"></i> Qualité de l'air</h1>
@@ -45,7 +45,7 @@
 	            </div>
 	        </section>
         </a>
-        <a href="#">
+        <a href="/Hackathon/code/index.php/detail_eau">
 	        <section>
 	            <div class="info">
 	                <h1><i class="fa fa-tint green" aria-hidden="true"></i> Baignade</h1>
