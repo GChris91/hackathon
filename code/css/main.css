@@ -1,0 +1,19 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.toggled {
+	padding-left: 70px;
+}
+
+i {
+	border: 2px solid red;
+	text-indent: 0;
+	font-size: 2em;
+	border-radius: 4px;
+	color: red;
+	padding: 5px;
+}
+
