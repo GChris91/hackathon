@@ -29,8 +29,5 @@
 				Baignade <strong>INTERDITE</strong>
 			</span>
 		</section>
-
-		
-
 	</div>
 <?php $contents = ob_get_clean(); ?>

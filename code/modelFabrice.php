@@ -1,6 +1,6 @@
 <?php
 	function open_database_connection(){
-		$link =  mysqli_connect('localhost', 'root', '', 'testhackathon'); 
+		$link =  mysqli_connect('localhost', 'root', '', 'glamgs'); 
         mysqli_set_charset($link,"utf8");
         return $link; 
 	}
@@ -12,8 +12,8 @@
 	function get_last_water_quality($lieu){
 		$link = open_database_connection();
 		$query = 'SELECT *
-		FROM (SELECT MAX(Date) as Date, qualite.idPtPrelevement FROM qualite,ptprelevement,lieu  WHERE qualite.idPtPrelevement = ptprelevement.idPtPrelevement AND ptprelevement.idLieu = lieu.idLieu AND lieu.NomLieu = "'.$lieu.'" ) as dernieresDates, qualite
-		WHERE dernieresDates.Date = qualite.Date and qualite.idPtPrelevement = dernieresDates.idPtPrelevement';
+		FROM (SELECT MAX(dateReleve) as dateReleve FROM qualiteeau_prelevement  WHERE qualiteeau_prelevement.idPointPrelevement = '.$lieu.' ) as dernieresDates, qualiteeau_prelevement
+		WHERE dernieresDates.dateReleve = qualiteeau_prelevement.dateReleve AND qualiteeau_prelevement.idPointPrelevement = '.$lieu.'';
 		$result = mysqli_query($link, $query ); 
 		$prelevement = mysqli_fetch_assoc($result);
         mysqli_free_result($result);           
@@ -31,33 +31,32 @@
 
 	function qualification_baignade($lieu){   
 		$prelevements = get_last_water_quality($lieu);
-		if ($prelevements['EscherichiaColi'] > 2000) {
-			return 4;
+		if ($prelevements['esccoli42'] > 2000) {
+			return 'red';
 		}
-		elseif ($prelevements['EscherichiaColi'] > 1000 OR $prelevements['EnterocoquesIntestinaux'] > 370) {
-			return 3;
-		}elseif ($prelevements['EscherichiaColi'] > 100 OR $prelevements['EnterocoquesIntestinaux'] > 100) {
-			return 2;
+		elseif ($prelevements['esccoli42'] > 1000 OR $prelevements['entfec43'] > 370) {
+			return 'orange';
+		}elseif ($prelevements['esccoli42'] > 100 OR $prelevements['entfec43'] > 100) {
+			return 'yellow';
 		}else{
-			return 1;
+			return 'green';
 		}
 	}
 
 	function get_pt_prelevement_proche($maLatitude,$maLongitude){
 		$link = open_database_connection();
-		$query = 'SELECT idPtPrelevement,Latitude,Longitude FROM ptprelevement ORDER BY idPtPrelevement';
+		$query = 'SELECT idPointPrelevement,Latitude,Longitude FROM point_prelevement ORDER BY idPointPrelevement';
 		$resultall = mysqli_query($link,$query);
 		$row = mysqli_fetch_assoc($resultall);
-		$idPlusProche = $row['idPtPrelevement'];
+		$idPlusProche = $row['idPointPrelevement'];
 		$distPlusProche = distancePointsGPS($maLatitude,$maLongitude,$row['Latitude'],$row['Longitude']);
 		while ($row = mysqli_fetch_assoc($resultall)) {
 			$distStation =  distancePointsGPS($maLatitude,$maLongitude,$row['Latitude'],$row['Longitude']);
 			if ($distPlusProche > $distStation) {
-				$idPlusProche = $row['idPtPrelevement'];
+				$idPlusProche = $row['idPointPrelevement'];
 				$distPlusProche = $distStation;
-				echo $distPlusProche.'<br/>';
 			}
 		}
-		echo $distPlusProche;
+		return $idPlusProche;
 	}
 ?>
