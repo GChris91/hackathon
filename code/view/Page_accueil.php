@@ -13,13 +13,13 @@
     <nav>
         <ul>
             <li>
-                <img src="/Hackathon/code/img/wind_red_small.png" class="red"><!-- <i class="fa fa-cloud green" aria-hidden="true"></i> -->
+                <img src="/Hackathon/code/img/wind_green_small.png" class="green"><!-- <i class="fa fa-cloud green" aria-hidden="true"></i> -->
             </li>
             <li>
-                <i class="fa fa-free-code-camp red" aria-hidden="true"></i>
+                <img src="/Hackathon/code/img/fire_red.png" class="red">
             </li>
             <li>
-                <i class="fa fa-tint green" aria-hidden="true"></i>
+                <img src="/Hackathon/code/img/swim_yellow.png" class="yellow">
             </li>
         </ul>
     </nav>
@@ -30,7 +30,7 @@
   	<a href="/Hackathon/code/index.php/detail_air">
         <section>
             <div class="info">
-                <h1><img src="/Hackathon/code/img/wind_green_small.png" class="green"></i> Qualité de l'air</h1>
+                <h1><img src="/Hackathon/code/img/wind_green_small.png" class="green"> Qualité de l'air</h1>
                 <span class="description">L'air est de bonne qualité</span>
             </div>
             <div class="legend">
@@ -41,7 +41,7 @@
     <a href="/Hackathon/code/index.php/detail_feu">
         <section>
             <div class="info">
-                <h1><i class="fa fa-free-code-camp red" aria-hidden="true bg-yellow"></i> Risque d'incendie</h1>
+                <h1><img src="/Hackathon/code/img/fire_red.png" class="red"> Risque d'incendie</h1>
                 <span class="description">Risque d'incendie élevé, faire un feu est interdit</span>
             </div>
             <div class="legend">
@@ -52,7 +52,7 @@
       <a href="/Hackathon/code/index.php/detail_eau">
         <section>
             <div class="info">
-                <h1><i class="fa fa-tint green" aria-hidden="true"></i> Baignade</h1>
+                <h1><img src="/Hackathon/code/img/swim_yellow.png" id="no-border" class="yellow"> Baignade</h1>
                 <span class="description">Baignade autorisée</span>
             </div>
             <div class="legend">
@@ -114,7 +114,7 @@
       $(document).ready(function() {
         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
           var page = $(this).attr('href'); // Page cible
-          var speed = 750; // Durée de l'animation (en ms)
+          var speed = 600; // Durée de l'animation (en ms)
           $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
           return false;
         });

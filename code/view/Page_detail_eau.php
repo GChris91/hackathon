@@ -22,15 +22,12 @@
 			</span>
 		</section>
 		
-		<section class="rgba-red last">
+		<section class="rgba-red last-p">
 			<h3 class="red">Rouge</h3>
 			<span>
 				Risque sanitaire <strong>AVÉRÉ</strong><br/>
 				Baignade <strong>INTERDITE</strong>
 			</span>
 		</section>
-
-		
-
 	</div>
 <?php $contents = ob_get_clean(); ?>

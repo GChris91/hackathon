@@ -26,7 +26,7 @@
 			</span>
 		</section>
 
-		<p>
+		<p class="last-p">
 			Données en provenances de météo.nc.
 		</p>
 	</div>
