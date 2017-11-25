@@ -1,6 +1,19 @@
 <?php ob_start(); ?>
   <div id="scroll-spy"></div>
+<<<<<<< HEAD
  
+=======
+<<<<<<< HEAD
+ 
+  <div id="container">
+      <div id="map"></div>
+      <a href="/Hackathon/code"><i class="fa fa-bullseye locate-icon" aria-hidden="true"></i></a>
+  </div>
+ <div class="meteo"></div>
+  <!-- Menu -->
+  <a class="js-scrollTo" href="#more">
+=======
+>>>>>>> e10f5bf9c04f7c0fbf16d18cff8a07ab5f954be2
 	<div id="container">
 	    <div id="map"></div>
       <a href="/Hackathon/code"><i class="fa fa-bullseye locate-icon" aria-hidden="true"></i></a>
@@ -8,6 +21,7 @@
  <div class="meteo"></div>
 	<!-- Menu -->
 	<a class="js-scrollTo" href="#more">
+>>>>>>> 477141f54526458e7e23ff164b10de89c121704c
     <div id="top-icon" onclick="clickScroll();"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
   </a>
   <a class="js-scrollTo" href="#more">
@@ -20,7 +34,11 @@
                 <img src="/Hackathon/code/img/fire_red.png" class="red">
             </li>
             <li>
+<<<<<<< HEAD
+                <img src="/Hackathon/code/img/swim_<?php echo $baignade?>.png" class="yellow">
+=======
                 <img src="/Hackathon/code/img/swim_yellow.png" class="yellow">
+>>>>>>> 477141f54526458e7e23ff164b10de89c121704c
             </li>
         </ul>
     </nav>
@@ -28,7 +46,11 @@
 
   <!-- /#page-content-wrapper -->
   <div id="more">
+<<<<<<< HEAD
+    <a href="/Hackathon/code/index.php/detail_air">
+=======
   	<a href="/Hackathon/code/index.php/detail_air">
+>>>>>>> 477141f54526458e7e23ff164b10de89c121704c
         <section>
             <div class="info">
                 <h1><img src="/Hackathon/code/img/wind_green_small.png" class="green"> Qualité de l'air</h1>

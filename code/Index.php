@@ -1,7 +1,9 @@
 <?php
    
-   require_once 'model.php';     
-   require_once 'controllers.php';
+   require_once 'model.php';
+   require_once 'modelFabrice.php';
+   require_once 'Controller.php';
+
 
 
    session_start();
