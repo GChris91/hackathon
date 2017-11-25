@@ -6,39 +6,21 @@
         require 'view/shared/_Layout.php'; 
     }
 
-    function carte_vide_action()
+    function detail_feu_action()
     {	
-        require 'view/Page_carte_vide.php';
-        require 'view/shared/_Layout.php';    
-    }
-
-    function carte_feu_action()
-    {	
-        require 'view/Page_carte_feu.php';
+        require 'view/Page_detail_feu.php';
         require 'view/shared/_Layout.php';   
     }
 
-    function carte_eau_action()
+    function detail_eau_action()
     {	
-        require 'view/Page_carte_eau.php';
+        require 'view/Page_detail_eau.php';
         require 'view/shared/_Layout.php';    
     }
 
-    function carte_meteo_action()
+	function detail_air_action()
     {	
-        require 'view/Page_carte_meteo.php';
-        require 'view/shared/_Layout.php';    
-    }
-
-    function carte_population_action()
-    {	
-        require 'view/Page_carte_population.php';
-        require 'view/shared/_Layout.php';   
-    }
-	
-	function carte_air_action()
-    {	
-        require 'view/Page_carte_air.php'; 
+        require 'view/Page_detail_air.php'; 
         require 'view/shared/_Layout.php';   
     }
 

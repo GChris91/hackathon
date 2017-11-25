@@ -1,7 +1,7 @@
 <?php
    
-   require_once 'model.php';     
-   require_once 'controllers.php';
+   //require_once 'Model.php';     
+   require_once 'Controller.php';
 
 
    session_start();
@@ -19,29 +19,17 @@
     {
         accueil_action(); 
 
-    }elseif ('/Hackathon/index.php/carte_vide' == $uri)
+    }elseif('/Hackathon/index.php/detail_feu' == $uri)
     {
-        carte_vide_action();
+        detail_feu_action();
 
-    }elseif('/Hackathon/index.php/carte_feu' == $uri)
+    }elseif('/Hackathon/index.php/detail_eau' == $uri)
     {
-        carte_feu_action();
+        detail_eau_action();
 
-    }elseif('/Hackathon/index.php/carte_eau' == $uri)
+    }elseif('/Hackathon/index.php/detail_air' == $uri)
     {
-        carte_eau_action();
-
-    }elseif('/Hackathon/index.php/carte_meteo' == $uri)
-    {
-        carte_meteo_action();
-
-    }elseif('/Hackathon/index.php/carte_population' == $uri)
-    {
-        carte_population_action();
-
-    }elseif('/Hackathon/index.php/carte_air' == $uri)
-    {
-        carte_air_action();
+        detail_air_action();
 
     }else  
     {
