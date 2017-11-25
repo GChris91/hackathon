@@ -23,7 +23,7 @@
     <!-- /#page-content-wrapper -->
 
     <div class="more">
-    	<a href="/Hackathon/code/index.php/detail_air">
+    	<a href="/Hackathon/index.php/detail_air">
 	        <section>
 	            <div class="info">
 	                <h1><i class="fa fa-cloud green" aria-hidden="true"></i> Qualité de l'air</h1>
@@ -34,7 +34,7 @@
 	            </div>
 	        </section>
 	    </a>
-	    <a href="#">
+	    <a href="/Hackathon/index.php/detail_feu">
 	        <section>
 	            <div class="info">
 	                <h1><i class="fa fa-free-code-camp red" aria-hidden="true bg-yellow"></i> Risque d'incendie</h1>
@@ -45,7 +45,7 @@
 	            </div>
 	        </section>
         </a>
-        <a href="/Hackathon/code/index.php/detail_eau">
+        <a href="/Hackathon/index.php/detail_eau">
 	        <section>
 	            <div class="info">
 	                <h1><i class="fa fa-tint green" aria-hidden="true"></i> Baignade</h1>
@@ -67,8 +67,10 @@
       // locate you.
 
       function initMap() {
+
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
+          fullscreenControl: false,
           zoom: 15
         });
         var infoWindow = new google.maps.InfoWindow({map: map});

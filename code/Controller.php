@@ -21,7 +21,7 @@
     function carte_eau_action()
     {	
         //$prelevement = get_last_water_quality("Baie des Citrons");
-        get_pt_prelevement_proche(-22.262958,166.404716);
+        distancePointsGPS(-22.298019,166.438206,-22.296084,166.437629);
         require 'view/Page_carte_eau.php';
         require 'view/shared/_Layout.php';    
     }
