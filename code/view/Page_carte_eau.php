@@ -10,7 +10,7 @@
 	<body>
 	<p>
 	<?php 
-		echo $prelevement['Date'];
+		echo qualification_baignade("Anse Vata");
 	?>	
 	</p>	
 	</body>

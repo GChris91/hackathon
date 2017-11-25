@@ -20,7 +20,7 @@
 
     function carte_eau_action()
     {	
-        $prelevement = get_last_water_quality("Anse Vata");
+        $prelevement = get_last_water_quality("Baie des Citrons");
         require 'view/Page_carte_eau.php';
         require 'view/shared/_Layout.php';    
     }
@@ -45,7 +45,7 @@
 
     function erreur_404_action()
     {
-        require 'view/404.html';
+        //require 'view/404.html';
     }
 
 
