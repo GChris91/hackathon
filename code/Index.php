@@ -1,7 +1,8 @@
 <?php
    
-   require_once 'model.php';     
-   require_once 'controllers.php';
+   //require_once 'model.php'; 
+   require_once 'modelFabrice.php';        
+   require_once 'Controller.php';
 
 
    session_start();
@@ -27,7 +28,7 @@
     {
         carte_feu_action();
 
-    }elseif('/Hackathon/index.php/carte_eau' == $uri)
+    }elseif('/hackathon/index.php/carte_eau' == $uri)
     {
         carte_eau_action();
 
