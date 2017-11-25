@@ -115,6 +115,16 @@ li {
 	margin-bottom: 10px;
 }
 
+.meteo{
+	margin-top:-80px;
+	z-index: 1;
+	height: 50px;
+	width: 50px;
+	border:solid black 2px;
+	background: red;
+	position: absolute;
+}
+
 nav i, nav img {
 	border: 3px solid red;
 	border-radius: 50%!important;

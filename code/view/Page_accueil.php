@@ -1,10 +1,11 @@
 <?php ob_start(); ?>
   <div id="scroll-spy"></div>
+ 
 	<div id="container">
 	    <div id="map"></div>
       <a href="/Hackathon/code"><i class="fa fa-bullseye locate-icon" aria-hidden="true"></i></a>
 	</div>
-
+ <div class="meteo"></div>
 	<!-- Menu -->
 	<a class="js-scrollTo" href="#more">
     <div id="top-icon" onclick="clickScroll();"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
@@ -105,6 +106,7 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
+
     </script>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmWNGCwrowebt-qvmIr1wa64NsNGjd15Q&callback=initMap">
