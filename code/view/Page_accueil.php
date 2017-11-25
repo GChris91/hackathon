@@ -1,7 +1,11 @@
 <?php ob_start(); ?>
-	<div id="page-content">
+
+	<div id="container">
 	    <div id="map"></div>
+      <a href="/Hackathon/code"><i class="fa fa-bullseye locate-icon" aria-hidden="true"></i></a>
 	</div>
+
+  
 
 	<!-- Menu -->
 	<div id="top-icon"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
