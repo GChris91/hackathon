@@ -1,18 +1,19 @@
 <?php ob_start(); ?>
-
+  <div id="scroll-spy"></div>
 	<div id="container">
 	    <div id="map"></div>
       <a href="/Hackathon/code"><i class="fa fa-bullseye locate-icon" aria-hidden="true"></i></a>
 	</div>
 
-  
-
 	<!-- Menu -->
-	<div id="top-icon"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+	<a class="js-scrollTo" href="#more">
+    <div id="top-icon" onclick="clickScroll();"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+  </a>
+  <a class="js-scrollTo" href="#more">
     <nav>
         <ul>
-            <li class>
-                <i class="fa fa-cloud green" aria-hidden="true"></i>
+            <li>
+                <img src="/Hackathon/code/img/wind_red_small.png" class="red"><!-- <i class="fa fa-cloud green" aria-hidden="true"></i> -->
             </li>
             <li>
                 <i class="fa fa-free-code-camp red" aria-hidden="true"></i>
@@ -22,45 +23,44 @@
             </li>
         </ul>
     </nav>
-    
+  </a>
 
-    <!-- /#page-content-wrapper -->
-
-    <div class="more">
-    	<a href="/Hackathon/code/index.php/detail_air">
-	        <section>
-	            <div class="info">
-	                <h1><i class="fa fa-cloud green" aria-hidden="true"></i> Qualité de l'air</h1>
-	                <span class="description">L'air est de bonne qualité</span>
-	            </div>
-	            <div class="legend">
-	                <div class="level bg-red"></div><div class="level bg-orange"></div><div class="level bg-green"></div>
-	            </div>
-	        </section>
-	    </a>
-	    <a href="/Hackathon/code/index.php/detail_feu">
-	        <section>
-	            <div class="info">
-	                <h1><i class="fa fa-free-code-camp red" aria-hidden="true bg-yellow"></i> Risque d'incendie</h1>
-	                <span class="description">Risque d'incendie élevé, faire un feu est interdit</span>
-	            </div>
-	            <div class="legend">
-	                <div class="level bg-red"></div><div class="level bg-orange"></div><div class="level bg-yellow"></div><div class="level bg-green"></div>
-	            </div>
-	        </section>
-        </a>
-        <a href="/Hackathon/code/index.php/detail_eau">
-	        <section>
-	            <div class="info">
-	                <h1><i class="fa fa-tint green" aria-hidden="true"></i> Baignade</h1>
-	                <span class="description">Baignade autorisée</span>
-	            </div>
-	            <div class="legend">
-	                <div class="level bg-red"></div><div class="level bg-orange"></div><div class="level bg-yellow"></div><div class="level bg-green"></div>
-	            </div>
-	        </section>
-        </a>
-    </div>
+  <!-- /#page-content-wrapper -->
+  <div id="more">
+  	<a href="/Hackathon/code/index.php/detail_air">
+        <section>
+            <div class="info">
+                <h1><img src="/Hackathon/code/img/wind_green_small.png" class="green"></i> Qualité de l'air</h1>
+                <span class="description">L'air est de bonne qualité</span>
+            </div>
+            <div class="legend">
+                <div class="level bg-red"></div><div class="level bg-orange"></div><div class="level bg-green"></div>
+            </div>
+        </section>
+    </a>
+    <a href="/Hackathon/code/index.php/detail_feu">
+        <section>
+            <div class="info">
+                <h1><i class="fa fa-free-code-camp red" aria-hidden="true bg-yellow"></i> Risque d'incendie</h1>
+                <span class="description">Risque d'incendie élevé, faire un feu est interdit</span>
+            </div>
+            <div class="legend">
+                <div class="level bg-red"></div><div class="level bg-orange"></div><div class="level bg-yellow"></div><div class="level bg-green"></div>
+            </div>
+        </section>
+      </a>
+      <a href="/Hackathon/code/index.php/detail_eau">
+        <section>
+            <div class="info">
+                <h1><i class="fa fa-tint green" aria-hidden="true"></i> Baignade</h1>
+                <span class="description">Baignade autorisée</span>
+            </div>
+            <div class="legend">
+                <div class="level bg-red"></div><div class="level bg-orange"></div><div class="level bg-yellow"></div><div class="level bg-green"></div>
+            </div>
+        </section>
+      </a>
+  </div>
 <?php $contents = ob_get_clean(); ?>
 
 <?php ob_start(); ?>
@@ -107,6 +107,17 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmWNGCwrowebt-qvmIr1wa64NsNGjd15Q&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmWNGCwrowebt-qvmIr1wa64NsNGjd15Q&callback=initMap">
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+          var page = $(this).attr('href'); // Page cible
+          var speed = 750; // Durée de l'animation (en ms)
+          $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+          return false;
+        });
+      });
     </script>
 <?php $scripts = ob_get_clean(); ?>
