@@ -243,6 +243,10 @@ li > a {
 	border-bottom: 3px solid grey;
 }
 
+.details a {
+	color: rgba(255,255,255,0.7);
+}
+
 .details {
 	margin: 0;
 	background-color: #efefef;

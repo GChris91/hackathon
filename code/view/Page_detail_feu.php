@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 	<div class="details">
-		<h1>Risque d'incendie</h1>
+		<h1><a href="/Hackathon/code"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a> Risque d'incendie</h1>
 		<section class="rgba-green">
 			<h3 class="green">Vert</h3>
 			<span>
