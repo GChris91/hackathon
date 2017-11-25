@@ -17,6 +17,14 @@
 				toxiques <strong>se rapproche</strong> du seuil critique, aucune ne l'atteint.
 			</span>
 		</section>
+		<section class="rgba-yellow">
+			<h3 class="yellow">Jaune</h3>
+			<span>
+				La qualité de l'air est <strong>moyenne</strong>, 
+				<strong>au moins une</strong> concentration parmis les celles des éléments
+				toxiques <strong>se rapproche</strong> du seuil critique, aucune ne l'atteint.
+			</span>
+		</section>
 		<section class="rgba-red last">
 			<h3 class="red">Rouge</h3>
 			<span>

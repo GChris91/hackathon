@@ -11,13 +11,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link href="/Hackathon/css/simple-sidebar.css" rel="stylesheet">
-        <link rel="stylesheet" href="/Hackathon/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/Hackathon/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/Hackathon/css/main.css">
+		<link href="/Hackathon/code/css/simple-sidebar.css" rel="stylesheet">
+        <link rel="stylesheet" href="/Hackathon/code/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/Hackathon/code/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/Hackathon/code/css/main.css">
 		
         <script src="https://use.fontawesome.com/8501e867ce.js"></script>
-        <script src="/Hackathon/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="/Hackathon/code/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -27,8 +27,8 @@
         <?php echo $contents; ?>
 
 
-        <script src="/Hackathon/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="/Hackathon/js/vendor/bootstrap.min.js"></script>
+        <script src="/Hackathon/code/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="/Hackathon/code/js/vendor/bootstrap.min.js"></script>
         
         <!-- Menu Toggle Script -->
         <script>
@@ -38,8 +38,8 @@
         });
         </script>
         
-        <script src="/Hackathon/js/plugins.js"></script>
-        <script src="/Hackathon/js/main.js"></script>
+        <script src="/Hackathon/code/js/plugins.js"></script>
+        <script src="/Hackathon/code/js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
