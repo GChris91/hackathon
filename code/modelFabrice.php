@@ -26,7 +26,7 @@
 		$long1 = (string)$longitude1;
 		$lat2 = (string)$latitude2;
 		$long2 = (string)$longitude2;
-		echo bcpow(bcsub($lat2, $lat1), '2');
+		return bcmul(bcsqrt(bcadd(bcpow(bcsub($lat2, $lat1), '2'),bcpow(bcsub($long2, $long1), '2'))),'111195');
 	}
 
 	function qualification_baignade($lieu){   
@@ -45,9 +45,19 @@
 
 	function get_pt_prelevement_proche($maLatitude,$maLongitude){
 		$link = open_database_connection();
-		$query = 'SELECT idPtPrelevement,Latitude,Longitude FROM ptprelevement';
+		$query = 'SELECT idPtPrelevement,Latitude,Longitude FROM ptprelevement ORDER BY idPtPrelevement';
 		$resultall = mysqli_query($link,$query);
 		$row = mysqli_fetch_assoc($resultall);
-
+		$idPlusProche = $row['idPtPrelevement'];
+		$distPlusProche = distancePointsGPS($maLatitude,$maLongitude,$row['Latitude'],$row['Longitude']);
+		while ($row = mysqli_fetch_assoc($resultall)) {
+			$distStation =  distancePointsGPS($maLatitude,$maLongitude,$row['Latitude'],$row['Longitude']);
+			if ($distPlusProche > $distStation) {
+				$idPlusProche = $row['idPtPrelevement'];
+				$distPlusProche = $distStation;
+				echo $distPlusProche.'<br/>';
+			}
+		}
+		echo $distPlusProche;
 	}
 ?>
