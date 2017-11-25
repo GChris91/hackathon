@@ -20,6 +20,15 @@
         close_database_connection($link); 
         return $prelevement;
 	}
+
+	function distancePointsGPS($latitude1,$longitude1,$latitude2,$longitude2){
+		$lat1 = (string)$latitude1;
+		$long1 = (string)$longitude1;
+		$lat2 = (string)$latitude2;
+		$long2 = (string)$longitude2;
+		echo bcpow(bcsub($lat2, $lat1), '2');
+	}
+
 	function qualification_baignade($lieu){   
 		$prelevements = get_last_water_quality($lieu);
 		if ($prelevements['EscherichiaColi'] > 2000) {
@@ -32,5 +41,13 @@
 		}else{
 			return 1;
 		}
+	}
+
+	function get_pt_prelevement_proche($maLatitude,$maLongitude){
+		$link = open_database_connection();
+		$query = 'SELECT idPtPrelevement,Latitude,Longitude FROM ptprelevement';
+		$resultall = mysqli_query($link,$query);
+		$row = mysqli_fetch_assoc($resultall);
+
 	}
 ?>
